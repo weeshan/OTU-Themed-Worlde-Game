@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="game (1).css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Wordle - Blitz</title>
+</head>
+
+<body>
+  <header>
+    <h1>Wordle - Blitz</h1>
+  </header>
+  <div class="timer">Time Left:&nbsp<span id="timer">30</span>s</div>
+  
+  <button id="info-btn" title="How to Play">ℹ️</button>
+
+  <main>
+    <div class="game-container-wrapper">
+      <div class="timer-selection">
+        <h3>Select Timer Duration:</h3>
+        <label>
+          <input type="radio" name="timer" value="30" checked> 30 Seconds
+        </label>
+        <label>
+          <input type="radio" name="timer" value="45"> 45 Seconds
+        </label>
+        <label>
+          <input type="radio" name="timer" value="60"> 60 Seconds
+        </label>
+        <button id="start-game-btn">Start Game</button>
+      </div>
+
+    <div class="game-container">
+      <div class="grid">
+        <div class="row">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+          <input type="text" maxlength="1" class="cell">
+        </div>
+      </div>
+
+      <!-- Keyboard -->
+      <div id="keyboard-container">
+        <div class="keyboard-row">
+          <button class="key">Q</button>
+          <button class="key">W</button>
+          <button class="key">E</button>
+          <button class="key">R</button>
+          <button class="key">T</button>
+          <button class="key">Y</button>
+          <button class="key">U</button>
+          <button class="key">I</button>
+          <button class="key">O</button>
+          <button class="key">P</button>
+          <button class="key bksp"><i class="fas fa-backspace"></i></button>
+        </div>
+        <div class="keyboard-row">
+          <button class="key">A</button>
+          <button class="key">S</button>
+          <button class="key">D</button>
+          <button class="key">F</button>
+          <button class="key">G</button>
+          <button class="key">H</button>
+          <button class="key">J</button>
+          <button class="key">K</button>
+          <button class="key">L</button>
+          <button class="key enter">Enter</button>
+        </div>
+        <div class="keyboard-row">
+          <button class="key">Z</button>
+          <button class="key">X</button>
+          <button class="key">C</button>
+          <button class="key">V</button>
+          <button class="key">B</button>
+          <button class="key">N</button>
+          <button class="key">M</button>
+        </div>
+      </div>
+
+      <button class="go-again-btn" style="display: none;">Play Again</button>
+      <div class="message"></div>
+    </div>
+  </main>
+
+  <!-- How to Play Modal -->
+  <div id="how-to-play-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>How to Play Wordle Blitz</h2>
+      <p>
+        Answer as fast as you can before the timer runs out!
+      <ul>
+        <li><strong>4 letters per word,</strong> and <strong>6 attempts</strong> to guess the word!</li>
+        <li>Letters highlighted in <span style="color: blue;">blue</span>: correct position.</li>
+        <li>Letters highlighted in <span style="color: orange;">orange</span>: correct letter, wrong position.</li>
+        <li>Letters highlighted in <span style="color: gray;">gray</span>: incorrect letter.</li>
+      </ul>
+      <p>
+        Use the on-screen keyboard or your device keyboard to play. When ready, press Enter to submit your guess or
+        Backspace to edit your input.
+      </p>
+      <p>Good luck!</p>
+    </div>
+  </div>
+
+  <footer>
+    <button class="menu-btn" onclick="goToMenu()"><i class="fa-solid fa-house"></i></button>
+    <p>&copy; 2024 OTU Wordle. All rights reserved.</p>
+  </footer>
+
+  <script src="blitz.js"></script>
+</body>
+
+</html>

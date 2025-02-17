@@ -1,0 +1,285 @@
+.cell {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1px;
+  border: 2px solid #000;
+  border-radius: 5px; 
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.grid{
+  margin-bottom: 10px;
+}
+
+.cell:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.659); 
+  transition: box-shadow 0.2s ease;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url('OTU\ SIRC.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #a8a7a7;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter{
+  width: 80px;
+}
+
+.key:hover {
+  background-color: #d6d6d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.659); 
+  transition: box-shadow 0.2s ease;
+}
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1em;
+  background-color: #003C71;
+  color: white;
+  width: 50%;
+  max-width: 400px;
+  height: 80px;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 1rem auto;
+  border: 2px solid #000;
+  border-radius: 5px; 
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.go-again-btn,
+.menu-btn {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.go-again-btn:hover,
+.menu-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+footer p {
+  font-size: 0.9em;
+  color: white;
+}
+
+.go-again-btn:hover, .menu-btn:hover {
+  background-color: #c1c1c1;
+}
+
+.enter.disabled,.enter:not(.disabled) {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#message-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.message{
+  text-align: center;
+  color: white;
+  background-color: #0077CA;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+}
+
+#info-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  background-color: #003C71;
+  color: white;
+  width: 50%;
+  max-width: 400px;
+  height: 2em;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 1rem auto;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.game-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 74%;
+}
+
+.timer-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 1.5em;
+  background-color: #003C71;
+  color: white;
+  max-width: 320px;
+  padding: 1.75rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the grid horizontally */
+  margin-bottom: 10px; /* Adds space below the grid */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 400px;
+  padding-left: 32px;
+  text-align: left;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+}
+
+.modal .close:hover {
+  color: black;
+}
+
+#start-game-btn{
+  width: 100px;
+  height: 50px;
+  margin: 2px;
+  font-size: 0.7em;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #a8a7a7;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px
+}
+
+#start-game-btn:hover{
+  background-color: #d6d6d6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.659); 
+  transition: box-shadow 0.2s ease;
+}

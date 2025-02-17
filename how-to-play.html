@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - OTU Wordle</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h2>
+      Welcome to OTU Wordle
+    </h2>
+  </header>
+  <section class="how-to-play">
+    <h2>How to Play</h2>
+    <p>Wordle is a fun and challenging word game! The goal is to guess the secret word within the given number of attempts. Here's how it works:</p>
+    <ul>
+      <li>Type in your guess using the on-screen keyboard or your own.</li>
+      <li>Each letter in your guess will be highlighted based on its correctness:
+        <ul>
+          <li><span style="color: blue; font-weight: bold;">Blue</span>: The letter is in the correct position.</li>
+          <li><span style="color: orange; font-weight: bold;">Orange</span>: The letter is in the word but in the wrong position.</li>
+          <li><span style="color: gray; font-weight: bold;">Gray</span>: The letter is not in the word.</li>
+        </ul>
+      </li>
+      <li>You have a limited number of attempts to guess the word. Choose your letters wisely!</li>
+      <li>Game modes like <strong>Blitz</strong>, <strong>Hardcore</strong>, and <strong>Classic</strong> offer different challenges.</li>
+    </ul>
+    <p>Good luck, and have fun!</p>
+  </section>
+
+  <button class="menu-btn" onclick="goToMenu()">Go to Menu</button>
+
+  <footer>
+    <p>&copy; 2024 OTU Wordle. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

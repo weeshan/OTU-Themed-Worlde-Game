@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game with Pause Menu</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h2>
+      Menu
+    </h2>
+  </header>
+  <div class="menu-game-container">
+      <button class="how-to-btn" onclick="goToHowToPlay()">How to Play</button>
+      <button class="select-btn" onclick="gamemodeSelection()">Gamemode Selection</button>
+      <button class="exit-btn" onclick="exitGame()">Log Out</button>
+    </div>
+  </div>
+
+  <script>
+  
+    function resumeGame() {
+      pauseMenu.style.display = 'none';
+    }
+
+    function restartGame() {
+      location.reload();
+    }
+
+    function gamemodeSelection() {
+      window.location.href = 'gamemode-selection.html'; 
+    }
+
+    function exitGame() {
+      window.location.href = 'index.php'; 
+    }
+
+    function goToHowToPlay() {
+      window.location.href = 'how-to-play.html'; 
+    }
+  </script>
+
+<footer>
+  <p>&copy; 2024 OTU Wordle. All rights reserved.</p>
+</footer>
+</body>
+</html>
